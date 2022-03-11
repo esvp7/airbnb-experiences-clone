@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    font-family: Poppins, Leelawadee UI, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+    height: 80px;
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bold {
+    font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.gray {
+    color: #918E9B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero--photo {
+    max-width: 65%;
+    background-size: cover;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .hero--photo {
+    max-width: 100%;
+    background-size: cover;
+    display: block;
+    margin: auto;
+}   
+}
+
+.hero--header {
+    margin-top: 2rem;
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+
+.hero--text {
+    margin-top: 0;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 55px;
+    overflow-x: auto;
+}
+
+.card {
+    width: 175px;
+    font-size: 14px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+}
+
+.card--image {
+    width: 120%;
+    border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+/* ADD */
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+
+.card--star {
+    height: 14px;
+}
+
+/* ADD */
+.card--price {
+    margin-top: auto;
+}
+
+.card--badge {
+    position: absolute;
+    margin-top: 77.5%;
+    margin-left: 1.5rem;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
